@@ -1,0 +1,220 @@
+:root{
+  --emerald:#063d2e;
+  --emerald-light:#0d6b4f;
+  --silver:#c9c9c9;
+  --cream:#faf7ef;
+  --ink:#11231b;
+  --muted:#6f756f;
+}
+
+*{ box-sizing:border-box; }
+
+body{
+  margin:0;
+  font-family:Inter, system-ui, sans-serif;
+  background:
+    radial-gradient(circle at top, rgba(255,255,255,.08), transparent 32%),
+    linear-gradient(135deg, #06291f, #02130f);
+  color:white;
+}
+
+.page{
+  min-height:100vh;
+  display:none;
+  align-items:center;
+  justify-content:center;
+  padding:28px 18px;
+}
+
+.page.active{ display:flex; }
+
+.hero{
+  width:100%;
+  max-width:430px;
+  text-align:center;
+  padding:36px 24px;
+  border:1px solid rgba(201,201,201,.38);
+  border-radius:34px;
+  background:linear-gradient(145deg, rgba(6,61,46,.94), rgba(3,28,22,.94));
+  box-shadow:0 25px 70px rgba(0,0,0,.45);
+  animation:rise .7s ease;
+}
+
+.logo-mark{
+  width:58px;
+  height:58px;
+  display:grid;
+  place-items:center;
+  margin:0 auto 14px;
+  border:1px solid var(--silver);
+  border-radius:18px;
+  color:var(--silver);
+  font-size:28px;
+}
+
+.eyebrow{
+  text-transform:uppercase;
+  letter-spacing:.15em;
+  font-size:12px;
+  color:var(--silver);
+  font-weight:700;
+}
+
+.eyebrow.dark{ color:var(--emerald-light); }
+
+h1,h2{
+  font-family:"Playfair Display", Georgia, serif;
+  font-weight:700;
+}
+
+h1{
+  font-size:62px;
+  line-height:.92;
+  margin:8px 0 12px;
+}
+
+h2{
+  font-size:35px;
+  line-height:1.05;
+  color:var(--emerald);
+}
+
+.tagline{
+  font-weight:700;
+  color:#f4f1ea;
+}
+
+.quote{
+  font-family:"Playfair Display", Georgia, serif;
+  font-style:italic;
+  color:#e2e1dc;
+  line-height:1.5;
+}
+
+.countdown{
+  margin:24px 0;
+  padding:15px;
+  border-radius:20px;
+  border:1px solid rgba(201,201,201,.45);
+  background:rgba(255,255,255,.06);
+}
+
+.card,.wishlist-wrap{
+  width:100%;
+  max-width:450px;
+  background:var(--cream);
+  color:var(--ink);
+  border-radius:30px;
+  padding:28px;
+  text-align:center;
+  box-shadow:0 25px 65px rgba(0,0,0,.28);
+  animation:rise .5s ease;
+}
+
+.progress{
+  color:var(--muted);
+  font-weight:700;
+  font-size:14px;
+}
+
+button{
+  border:0;
+  border-radius:999px;
+  padding:15px 24px;
+  margin-top:14px;
+  background:linear-gradient(135deg, #f7f7f7, var(--silver));
+  color:var(--emerald);
+  font-weight:800;
+  font-size:16px;
+  box-shadow:0 10px 25px rgba(0,0,0,.18);
+  cursor:pointer;
+}
+
+.option{
+  display:flex;
+  width:100%;
+  justify-content:flex-start;
+  background:#fff;
+  color:var(--ink);
+  border:1px solid #e4ded3;
+  margin:12px 0;
+  box-shadow:0 8px 18px rgba(0,0,0,.06);
+}
+
+.option:hover, button:hover{
+  transform:translateY(-1px);
+}
+
+.note-card p{
+  text-align:left;
+  line-height:1.65;
+}
+
+.wide{
+  align-items:flex-start;
+}
+
+.wishlist-wrap{
+  max-width:980px;
+  margin:20px auto;
+}
+
+.wishlist-wrap h2{
+  font-size:48px;
+  margin:8px 0 24px;
+}
+
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit, minmax(220px, 1fr));
+  gap:16px;
+}
+
+.gift{
+  background:white;
+  border-radius:22px;
+  padding:16px;
+  text-align:left;
+  border:1px solid #eee7dc;
+  box-shadow:0 12px 24px rgba(0,0,0,.08);
+}
+
+.gift img{
+  width:100%;
+  height:150px;
+  object-fit:cover;
+  border-radius:16px;
+  margin-bottom:12px;
+}
+
+.tag{
+  color:var(--emerald-light);
+  font-size:13px;
+  font-weight:800;
+}
+
+.gift h3{
+  margin:8px 0;
+  font-size:18px;
+}
+
+.gift p{
+  color:#4b554f;
+  line-height:1.45;
+}
+
+.signature{
+  font-family:"Playfair Display", Georgia, serif;
+  font-size:24px;
+}
+
+@keyframes rise{
+  from{ opacity:0; transform:translateY(16px); }
+  to{ opacity:1; transform:translateY(0); }
+}
+
+@media (max-width:520px){
+  h1{font-size:55px;}
+  .wishlist-wrap h2{font-size:38px;}
+  .page{padding:18px 12px;}
+}

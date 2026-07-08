@@ -1,103 +1,139 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<title>Worth the Wrap</title>
-
-<style>
-
-body{
-    margin:0;
-    font-family:Georgia, serif;
-    background:#0B6E4F;
-    color:white;
-}
-
-.container{
-    max-width:700px;
-    margin:auto;
-    padding:40px 20px;
-    text-align:center;
-}
-
-.card{
-    background:white;
-    color:#222;
-    border-radius:25px;
-    padding:35px;
-    margin-top:30px;
-    box-shadow:0 10px 30px rgba(0,0,0,.2);
-}
-
-h1{
-    font-size:48px;
-    margin-bottom:10px;
-}
-
-h2{
-    color:#0B6E4F;
-}
-
-.quote{
-    font-style:italic;
-    opacity:.9;
-}
-
-button{
-    background:silver;
-    color:black;
-    border:none;
-    padding:16px 35px;
-    font-size:18px;
-    border-radius:50px;
-    cursor:pointer;
-    margin-top:25px;
-}
-
-button:hover{
-    transform:scale(1.05);
-}
-
-</style>
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Worth the Wrap</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500;700&family=Inter:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <main>
+    <section id="home" class="page active">
+      <div class="hero">
+        <div class="logo-mark">♕</div>
+        <p class="eyebrow">October 2 • Estefania</p>
+        <h1>Worth<br>the Wrap</h1>
+        <p class="tagline">The gifts I’ll truly love.</p>
+        <p class="quote">“The best gifts aren’t always the biggest — they’re the ones chosen with love.”</p>
+        <div class="countdown" id="countdown">Loading countdown...</div>
+        <button onclick="showPage('q1')">Start the Quiz →</button>
+      </div>
+    </section>
 
-<div class="container">
+    <section id="q1" class="page">
+      <div class="card">
+        <p class="progress">Question 1 of 3</p>
+        <h2>How do we know each other?</h2>
+        <button class="option" onclick="showPage('q2')">Family</button>
+        <button class="option" onclick="showPage('q2')">Best Friend</button>
+        <button class="option" onclick="showPage('q2')">Friend</button>
+        <button class="option" onclick="showPage('q2')">Coworker / Classmate</button>
+        <button class="option" onclick="showPage('q2')">Other</button>
+      </div>
+    </section>
 
-<h1>Worth the Wrap</h1>
+    <section id="q2" class="page">
+      <div class="card">
+        <p class="progress">Question 2 of 3</p>
+        <h2>What’s your budget?</h2>
+        <button class="option" onclick="showPage('q3')">Under $25</button>
+        <button class="option" onclick="showPage('q3')">$25 – $50</button>
+        <button class="option" onclick="showPage('q3')">$50 – $100</button>
+        <button class="option" onclick="showPage('q3')">$100 – $250</button>
+        <button class="option" onclick="showPage('q3')">$250+</button>
+        <button class="option" onclick="showPage('q3')">Surprise Me!</button>
+      </div>
+    </section>
 
-<p class="quote">
-"The best gifts aren't always the biggest—they're the ones chosen with love."
-</p>
+    <section id="q3" class="page">
+      <div class="card">
+        <p class="progress">Question 3 of 3</p>
+        <h2>When are you shopping?</h2>
+        <button class="option" onclick="showPage('note')">Today</button>
+        <button class="option" onclick="showPage('note')">This week</button>
+        <button class="option" onclick="showPage('note')">Last minute</button>
+        <button class="option" onclick="showPage('note')">Planning ahead</button>
+      </div>
+    </section>
 
-<div class="card">
+    <section id="note" class="page">
+      <div class="card note-card">
+        <p class="eyebrow dark">A little note</p>
+        <h2>Before you continue...</h2>
+        <p>Thank you for taking the time to celebrate with me. Every gift is appreciated, no matter the size or price.</p>
+        <p><strong>One of the things I treasure most is a handwritten birthday card.</strong> A few heartfelt words mean more to me than you know, and it’s something I’ll treasure for years to come.</p>
+        <button onclick="showPage('wishlist')">See My Wishlist →</button>
+      </div>
+    </section>
 
-<h2>Welcome 💚</h2>
+    <section id="wishlist" class="page wide">
+      <div class="wishlist-wrap">
+        <p class="eyebrow">Thoughtful gifts in every budget</p>
+        <h2>My Gift Matches</h2>
 
-<p>
-Hi! I'm Estefania.
-</p>
+        <div class="grid">
+          <article class="gift">
+            <span class="tag">⭐ Most Wanted</span>
+            <h3>Death Note Manga Box Set</h3>
+            <p>I’ve wanted this for my collection.</p>
+          </article>
 
-<p>
-I created this little guide to make birthday shopping easier and more fun.
-Answer a few quick questions, and I'll recommend gifts I'd genuinely love based on your budget.
-</p>
+          <article class="gift">
+            <img src="assets/images/dobby.jpg" alt="LEGO Harry Potter Dobby set">
+            <span class="tag">⭐ Most Wanted</span>
+            <h3>LEGO Harry Potter™ Dobby™</h3>
+            <p>A Harry Potter LEGO set I’d love to build and display.</p>
+          </article>
 
-<p>
-🎂 Birthday: <strong>October 2</strong>
-</p>
+          <article class="gift">
+            <span class="tag">💚 Would Make My Day</span>
+            <h3>LEGO Botanical Flowers</h3>
+            <p>Flowers that last forever.</p>
+          </article>
 
-<button>
-Start the Quiz
-</button>
+          <article class="gift">
+            <img src="assets/images/snoopy.jpg" alt="LEGO Snoopy set">
+            <span class="tag">💚 Would Make My Day</span>
+            <h3>Snoopy LEGO Set</h3>
+            <p>Cute, fun, and perfect for me.</p>
+          </article>
 
-</div>
+          <article class="gift">
+            <span class="tag">📖 Current Favorite</span>
+            <h3>Harry Potter / Slytherin Merchandise</h3>
+            <p>Anything Slytherin-themed is perfect.</p>
+          </article>
 
-</div>
+          <article class="gift">
+            <span class="tag">🛍️ Always a Great Choice</span>
+            <h3>Gift Cards</h3>
+            <p>Target, Ulta, Barnes & Noble, Starbucks, Visa, or Amazon.</p>
+          </article>
 
+          <article class="gift">
+            <span class="tag">💵 Saving for Something Bigger</span>
+            <h3>Cash</h3>
+            <p>Always appreciated and helps me save for something special.</p>
+          </article>
+        </div>
+
+        <button onclick="showPage('thanks')">Finish →</button>
+      </div>
+    </section>
+
+    <section id="thanks" class="page">
+      <div class="card thank-you">
+        <h2>Thank You 💚</h2>
+        <p>Whether you choose a gift, write me a card, or simply spend time with me, I’m grateful to have you in my life.</p>
+        <p class="signature">With love,<br>Estefania</p>
+        <button onclick="showPage('home')">Start Over</button>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
 </body>
 </html>
